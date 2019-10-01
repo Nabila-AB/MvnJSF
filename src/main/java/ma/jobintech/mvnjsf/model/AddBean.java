@@ -1,0 +1,43 @@
+package ma.jobintech.mvnjsf.model;
+
+import java.io.Serializable;
+
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+
+@Named("addBean")
+@SessionScoped
+public class AddBean implements Serializable {
+
+	private int number1;
+	
+	private int number2;
+	
+	private int resultat;
+	
+	public void additionner() {
+		resultat = number1 + number2;
+	}
+	public int getNumber1() {
+		return number1;
+	}
+	public void setNumber1(int number1) {
+		this.number1 = number1;
+	}
+	public int getNumber2() {
+		return number2;
+	}
+	public void setNumber2(int number2) {
+		this.number2 = number2;
+	}
+	public int getResultat() {
+		return resultat;
+	}
+	public void setResultat(int resultat) {
+		this.resultat = resultat;
+	}
+	public AddBean() {
+		
+	}
+
+}

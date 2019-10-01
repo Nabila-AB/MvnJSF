@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	>
+
+
+<f:view>
+	<head>
+<title>Login screen</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+	</head>
+	<body>
+		<h1>Login screen</h1>
+		<h:form>
+		
+		 Login: <h:inputText id="login"
+				value="#{loginBean.username}" required="true"
+				requiredMessage="La saisie du login est obligatoire !"
+				validator="#{loginBean.validateAField}" />
+				<h:message for="login" styleClass="errorBlock" />
+			<br />
+			
+			
+			Password:
+<h:inputSecret id="password" value="#{loginBean.password}" required="true"
+               requiredMessage="La saisie du mot de passe est obligatoire !"
+               validatorMessage="Votre mot de passe doit contenir entre 3 à 12 caractères">
+               
+    <f:validateLength minimum="3" maximum="12" />
+</h:inputSecret>
+				<h:message for="password" styleClass="errorBlock" />
+			<br />
+			<h:commandButton action="#{loginBean.returnAction}" value="Connecter" />
+			
+			
+		</h:form>
+	</body>
+</f:view>
+</html>
