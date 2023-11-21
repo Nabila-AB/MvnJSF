@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>6.1</version>
+            <version>8.0</version>
         </dependency>
         <!-- Weld CDI for Tomcat with all dependencies included (does not fulfill
             all capabilities !!!) -->
